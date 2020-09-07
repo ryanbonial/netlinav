@@ -13,15 +13,15 @@
   <div class="app-container">
 
     <!-- Navigation bar at the Root level -->
-    <div class="navigation-wrapper hidden" id="nav1">
-      <div class="navigation-bar level-root">
-        <ol class="app-navigation-items">
+    <header class="hidden" id="nav1">
+      <nav class="level-root">
+        <ul class="app-navigation-items">
           <li><a href="#" class="logo"></a></li>
           <li>
             <h5 class="active">Title of the page</h5>
           </li>
-        </ol>
-        <ol class="account-items">
+        </ul>
+        <ul class="account-items">
           <li>
             <div class="dropdown notifications-dropdown">
               <button type="button" class="notifications-icon"></button>
@@ -34,14 +34,14 @@
               <ul class="profile-dropdown"></ul>
             </div>
           </li>
-        </ol>
-      </div>
-    </div>
+        </ul>
+      </nav>
+    </header>
 
     <!-- Navigation bar at the Team level -->
-    <div class="navigation-wrapper hidden" id="nav2">
-      <div class="navigation-bar level-team">
-        <ol class="app-navigation-items">
+    <header class="hidden" id="nav2">
+      <nav class="level-team">
+        <ul class="app-navigation-items">
           <li><a href="#" class="logo"></a></li>
           <li>
             <div class="dropdown team-swither-dropdown">
@@ -56,7 +56,7 @@
               <ul class="team-dropdown"></ul>
             </div>
           </li>
-        </ol>
+        </ul>
         <ul class="navigation-links">
           <li><a href="#">
               <h5 class="active">Sites</h5>
@@ -77,7 +77,7 @@
               <h5>Settings</h5>
             </a></li>
         </ul>
-        <ol class="account-items">
+        <ul class="account-items">
           <li>
             <div class="dropdown notifications-dropdown">
               <button type="button" class="notifications-icon"></button>
@@ -90,14 +90,14 @@
               <ul class="profile-dropdown"></ul>
             </div>
           </li>
-        </ol>
-      </div>
-    </div>
+        </ul>
+      </nav>
+    </header>
 
     <!-- Navigation bar at Site level -->
-    <div class="navigation-wrapper" id="nav3">
-      <div class="navigation-bar level-site">
-        <ol class="app-navigation-items">
+    <header id="nav3">
+      <nav class="level-site">
+        <ul class="app-navigation-items">
           <li><a href="#" class="logo"></a></li>
           <li>
             <div class="dropdown team-swither-dropdown">
@@ -112,7 +112,7 @@
               <ul class="team-dropdown"></ul>
             </div>
           </li>
-        </ol>
+        </ul>
         <ul class="navigation-links">
           <li class="back-link"><a href="#">
               <h5>Sites</h5>
@@ -121,7 +121,7 @@
               <h5 class="active">site-name-generated-1234</h5>
             </a></li>
         </ul>
-        <ol class="account-items">
+        <ul class="account-items">
           <li>
             <div class="dropdown notifications-dropdown">
               <button type="button" class="notifications-icon"></button>
@@ -134,27 +134,27 @@
               <ul class="profile-dropdown"></ul>
             </div>
           </li>
-        </ol>
-      </div>
-    </div>
+        </ul>
+      </nav>
+    </header>
 
-    <div class="mock-content">
-      <div class="sitebar" id="sitebar"></div>
-      <div class="list-of-cards">
+    <main>
+      <aside class="sitebar" id="sitebar"></aside>
+      <section class="list-of-cards">
         <h1 id="title">Page title</h1>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-      </div>
-    </div>
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+        <article class="card"></article>
+      </section>
+    </main>
 
   </div>
 
   <!-- Little navigation bar switcher -->
-  <div class="wrapper">
+  <footer>
     <div class="switcher" id="switcher">
       <div class="input-row">
         <input type="radio" name="mode" value="root" id="mode1" class="mode-switcher" />
@@ -181,7 +181,7 @@
         </label>
       </div>
     </div>
-  </div>
+  </footer>
 
   <script src="index.js"></script>
 </body>
