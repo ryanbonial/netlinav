@@ -13,37 +13,14 @@
   <div class="app-container">
 
     <!-- Navigation bar at the Root level -->
-    <header class="hidden" id="nav1">
+    <header>
       <nav class="level-root">
         <ul class="app-navigation-items">
           <li><a href="#" class="logo"></a></li>
-          <li>
+          <li class="hidden nav1">
             <h5 class="active">Title of the page</h5>
           </li>
-        </ul>
-        <ul class="account-items">
-          <li>
-            <div class="dropdown notifications-dropdown">
-              <button type="button" class="notifications-icon"></button>
-              <ul class="notifications-dropdown"></ul>
-            </div>
-          </li>
-          <li>
-            <div class="dropdown account-dropdown">
-              <button type="button" class="avatar"></button>
-              <ul class="profile-dropdown"></ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- Navigation bar at the Team level -->
-    <header class="hidden" id="nav2">
-      <nav class="level-team">
-        <ul class="app-navigation-items">
-          <li><a href="#" class="logo"></a></li>
-          <li>
+          <li class="hidden nav2 nav3">
             <div class="dropdown team-swither-dropdown">
               <button type="button" class="button team-switcher">
                 Team name
@@ -57,7 +34,8 @@
             </div>
           </li>
         </ul>
-        <ul class="navigation-links">
+
+        <ul class="navigation-links hidden nav2">
           <li><a href="#">
               <h5 class="active">Sites</h5>
             </a></li>
@@ -77,43 +55,8 @@
               <h5>Settings</h5>
             </a></li>
         </ul>
-        <ul class="account-items">
-          <li>
-            <div class="dropdown notifications-dropdown">
-              <button type="button" class="notifications-icon"></button>
-              <ul class="notifications-dropdown"></ul>
-            </div>
-          </li>
-          <li>
-            <div class="dropdown account-dropdown">
-              <button type="button" class="avatar"></button>
-              <ul class="profile-dropdown"></ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
-    <!-- Navigation bar at Site level -->
-    <header id="nav3">
-      <nav class="level-site">
-        <ul class="app-navigation-items">
-          <li><a href="#" class="logo"></a></li>
-          <li>
-            <div class="dropdown team-swither-dropdown">
-              <button type="button" class="button team-switcher">
-                Team name
-                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6">
-                  <path fill="#FFF"
-                    d="M8.99991268,3.07028102 L6.41857138,5.57471215  C6.17648594,5.80958474 6.17648594,6.19041552 6.41857138,6.42520326 L9,8.92971911 L7.38140903,10.5 L3.18156408,6.42520313 C2.93947864,6.19041539 2.93947864,5.80958461 3.18156408,5.57471202 L7.38149648,1.5 L8.99991268,3.07028102 Z"
-                    transform="rotate(-90 4 5)" />
-                </svg>
-              </button>
-              <ul class="team-dropdown"></ul>
-            </div>
-          </li>
-        </ul>
-        <ul class="navigation-links">
+        <ul class="navigation-links nav3">
           <li class="back-link"><a href="#">
               <h5>Sites</h5>
             </a></li>

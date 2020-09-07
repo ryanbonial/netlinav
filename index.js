@@ -5,13 +5,13 @@ for (const levelChoice of navLevelRadios) {
 
 function switchNavLevel(level) {
   // Reset by hiding all nav items
-  [...document.querySelectorAll('#nav1, #nav2, #nav3, #sitebar, #title')].forEach(el => el.classList.add('hidden'))
+  [...document.querySelectorAll('.nav1, .nav2, .nav3, #sitebar, #title')].forEach(el => el.classList.add('hidden'))
   // Show nav for chosen nav level
   if (level === 'root') {
-    document.querySelector('#nav1').classList.remove('hidden')
+    [...document.querySelectorAll('.nav1')].forEach(el => el.classList.remove('hidden'))
   } else if (level === 'team') {
-    document.querySelector('#nav2').classList.remove('hidden')
+    [...document.querySelectorAll('.nav2')].forEach(el => el.classList.remove('hidden'))
   } else if (level === 'site') {
-    [...document.querySelectorAll('#nav3, #sitebar, #title')].forEach(el => el.classList.remove('hidden'))
+    [...document.querySelectorAll('.nav3, #sitebar, #title')].forEach(el => el.classList.remove('hidden'))
   }
 }
