@@ -31,13 +31,6 @@ h1 {
   margin-bottom: 16px;
 }
 
-h5 {
-  font-size: 1.14em;
-  font-weight: 600;
-  line-height: 24px;
-  margin: 0;
-}
-
 .app-container {
   position: relative;
   box-sizing: border-box;
@@ -82,13 +75,17 @@ nav {
     "teamArea linksArea profileArea"
     ". . .";
 
-  & ul, & ol {
+  & ul {
     display: flex;
     align-items: center;
     padding: 0;
     margin: 0;
     & li {
       list-style: none;
+      font-size: 1.14em;
+      font-weight: 600;
+      line-height: 24px;
+      margin: 0;
     }
   }
   & .app-navigation-items > li {
@@ -139,6 +136,10 @@ ul.navigation-links {
     &:focus {
       background-color: var(--neutral999);
       cursor: pointer;
+    }
+
+    &.active {
+      color: var(--neutral000);
     }
   }
 
@@ -308,7 +309,7 @@ main {
   }
 }
 
-.sitebar {
+aside {
   display: block;
   position: sticky;
   top: 104px;
