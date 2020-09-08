@@ -1,0 +1,154 @@
+/* ⭐️Checkbox and Radio Styling ⭐️ */
+
+/* CSS madness, hiding the actual checkbox */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked,
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+/* The actual label */
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label,
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+  /* Extends h5.emphasis 👇 */
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--neutral900);
+}
+
+label p {
+  margin: 4px 0 8px 0;
+}
+
+/* Basic shape of the checkbox/radio */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Checkbox only shape */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  border-radius: 6px;
+}
+
+/* Radio only shape */
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+  border-radius: 10px;
+}
+
+/* Checked state */
+
+[type="radio"]:checked + label:before {
+  background: var(--neutral100);
+  box-shadow: inset 0 0 0 6px var(--teal800);
+}
+
+/* Default state */
+[type="checkbox"]:not(:checked) + label:before,
+[type="radio"]:not(:checked) + label:before{
+  background: var(--neutral100);
+  box-shadow: inset 0 0 0 2px var(--neutral400);
+}
+
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before,
+[type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before {
+  box-shadow: none;
+}
+
+[type="checkbox"]:disabled:checked + label:before {
+  background: var(--neutral200);
+  background-image: var(--checkmarkTeal);
+  background-size: 11px 8px;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+}
+
+[type="radio"]:disabled:checked + label:before {
+  background-image: var(--circleTeal); /* Tried using simple inset box-shadows but there was some artifacts */
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+[type="checkbox"]:disabled:not(:checked) + label:before {
+  background: var(--neutral200);
+  background-image: var(--uncheckMark);
+  background-size: 8px 8px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Hover/Focus/Active states */
+[type="checkbox"]:checked + label:hover:before,
+[type="checkbox"]:checked + label:active:before,
+[type="checkbox"]:checked + label:focus:before {
+  box-shadow: 0 0 0 2px var(--gold500);
+}
+
+[type="radio"]:not(:checked) + label:hover:before,
+[type="radio"]:not(:checked) + label:active:before,
+[type="radio"]:not(:checked) + label:focus:before {
+  box-shadow: inset 0 0 0 2px var(--gold500);
+}
+
+[type="checkbox"]:not(:checked) + label:hover:before,
+[type="checkbox"]:not(:checked) + label:active:before,
+[type="checkbox"]:not(:checked) + label:focus:before {
+  box-shadow: inset 0 0 0 2px var(--gold500);
+}
+
+[type="checkbox"]:disabled:not(:checked) + label:hover:before,
+[type="checkbox"]:disabled:checked + label:hover:before,
+[type="radio"]:disabled:not(:checked) + label:hover:before,
+[type="radio"]:disabled:checked + label:hover:before {
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.input-row {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 8px;
+  width: auto;
+}
+
+.switcher {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 16px;
+  margin: auto;
+  background: var(--neutral000);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(14,30,37,0.12);
+}
+
+p {
+  color: var(--neutral900);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.muted {
+  color: #656F74;
+}
