@@ -23,6 +23,15 @@ body {
   margin: 0;
 }
 
+.skip-link {
+  right: -10%;
+  position: absolute;
+  transform: translateY(-100%);
+  &:focus {
+    transform: translateY(50%);
+  }
+}
+
 h1 {
   font-size: 2em;
   font-weight: 700;

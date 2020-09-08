@@ -10,12 +10,13 @@
 
 <body>
   <div class="app-container">
+    <a class="skip-link" href="#maincontent">Skip to main content</a>
 
     <!-- Navigation bar at the Root level -->
     <header>
       <nav class="level-root">
         <ul class="app-navigation-items">
-          <li><a href="#" class="logo"></a></li>
+          <li><a href="#" class="logo" aria-roledescription="logo" aria-label="Netlify logo"></a></li>
           <li class="hidden nav-root active">
             Title of the page
           </li>
@@ -23,7 +24,8 @@
           <li class="nav-site nav-team">
             <button type="button" class="button team-switcher">
               Team name
-              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" aria-labelledby="arrowDownTitle">
+                <title id="arrowDownTitle">Expand team options</title>
                 <path fill="#FFF"
                   d="M8.99991268,3.07028102 L6.41857138,5.57471215  C6.17648594,5.80958474 6.17648594,6.19041552 6.41857138,6.42520326 L9,8.92971911 L7.38140903,10.5 L3.18156408,6.42520313 C2.93947864,6.19041539 2.93947864,5.80958461 3.18156408,5.57471202 L7.38149648,1.5 L8.99991268,3.07028102 Z"
                   transform="rotate(-90 4 5)" />
@@ -49,18 +51,18 @@
 
         <ul class="account-items">
           <li>
-            <button type="button" class="notifications-icon"></button>
+            <button type="button" class="notifications-icon" aria-label="Notifications button" title="Notifications button"></button>
             <ul class="notifications-dropdown"></ul>
           </li>
           <li>
-            <button type="button" class="avatar"></button>
+            <button type="button" class="avatar" aria-label="User avatar button" title="User avatar button"></button>
             <ul class="profile-dropdown"></ul>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <aside id="sitebar"></aside>
       <section class="list-of-cards">
         <h1 id="title">Page title</h1>
