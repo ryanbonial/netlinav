@@ -36,6 +36,12 @@ Modernize JS
 - Added aria labels and titles to the avatar and notification buttons.
 - Added an aria role description to the logo.
 
+## Index.css
+
+- Break out css by components so that it is easier to maintain.
+- Organize css by specificity (from low to high).
+- Remove unused css
+
 ## If I had more time
 
 - Fix the flicker when quickly hovering over the user avatar.
